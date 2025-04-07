@@ -6,7 +6,7 @@ const words = [
   "machine learning",
   "natural language processing",
   "web development",
-  "data science",
+  "machine learning",
   "artificial intelligence",
 ]
 
