@@ -40,7 +40,7 @@ module.exports = {
             DEFAULT: "hsl(var(--card))",
             foreground: "hsl(var(--card-foreground))",
           },
-          "baby-blue": "#89CFF0",
+          "baby-blue": "#4A90E2",
           blue: {
             50: "#E6F3FF",
             100: "#CCE7FF",

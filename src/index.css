@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
 :root {
-  --baby-blue: #89CFF0;
+  --baby-blue: #4A90E2;
 }
 
 body {
@@ -22,5 +24,10 @@ body {
 
 .animate-fade-in-out {
   animation: fadeInOut 1s ease-in-out infinite;
+}
+
+.font-bubble {
+  font-family: 'Comic Neue', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 

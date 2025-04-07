@@ -22,8 +22,10 @@ function App() {
           <LandingAnimation onComplete={handleAnimationComplete} />
         ) : (
           <>
-            <Navbar />
-            <main className="pt-12">
+            <div className="pt-4">
+              <Navbar />
+            </div>
+            <main className="pt-4">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/experience" element={<Experience />} />
