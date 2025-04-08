@@ -7,6 +7,7 @@ import Projects from "./pages/Projects.tsx"
 import Taekwondo from "./pages/Taekwondo.tsx"
 import Contact from "./pages/Contact.tsx"
 import LandingAnimation from "./components/LandingAnimation.tsx"
+import Footer from "./components/Footer.tsx"
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="flex flex-col min-h-screen bg-white">
         {showLanding ? (
           <LandingAnimation onComplete={handleAnimationComplete} />
         ) : (
@@ -25,7 +26,7 @@ function App() {
             <div className="pt-4">
               <Navbar />
             </div>
-            <main className="pt-4">
+            <main className="flex-grow pt-4">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/experience" element={<Experience />} />
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
+            <Footer />
           </>
         )}
       </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import computerIcon from '../assets/icons/computer.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
-import emailIcon from '../assets/icons/mail.png';
 import githubIcon from '../assets/icons/github-sign.png';
 import xIcon from '../assets/icons/twitter.png';
 
@@ -47,11 +46,6 @@ export default function HomeContent() {
                 I drink matcha three times a week. I compete for Team USA Taekwondo. I played piano for seven years. 
                 I resell shoes out of love. My favorite number is 6. Raw crab (Gejang) is the best food.
               </p>
-            </div>
-
-            <div className="flex items-center space-x-3">
-              <img src={emailIcon} alt="Email" className="w-6 h-6 object-contain" />
-              <span>anthonydo@ucla.edu</span>
             </div>
           </div>
         </motion.div>

@@ -3,7 +3,7 @@ import HomeContent from '../components/HomeContent.tsx';
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div>
       <HomeContent />
     </div>
   );

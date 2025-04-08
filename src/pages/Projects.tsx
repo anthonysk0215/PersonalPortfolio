@@ -54,10 +54,10 @@ export default function Projects() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 70 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto"
+      transition={{ duration: 1 }}
+      className="max-w-4xl mx-auto pb-10"
     >
       <h1 className="text-5xl font-bubble mb-8 text-blue-500">Projects</h1>
 
@@ -65,7 +65,7 @@ export default function Projects() {
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -10 }}
             className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-full max-w-sm"
           >
             <div className="h-48 bg-sky-50 flex items-center justify-center">
