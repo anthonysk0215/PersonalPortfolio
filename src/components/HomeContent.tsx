@@ -17,13 +17,14 @@ export default function HomeContent() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-[55%] border-2 border-gray-200 rounded-3xl p-6 shadow-lg ml-16"
         >
-          <h1 className="text-5xl font-bold mb-4">
-            <span className="text-black font-bubble">Hi! I'm </span>
-            <span className="text-blue-500 font-bubble">Anthony Do</span>
+          <h1 className="flex justify-center text-6xl font-bold mb-4">
+            <span className="text-blue-500 font-bubble">
+              Anthony Do
+            </span>
           </h1>
 
           <p className="text-lg text-gray-600 mb-6">
-            I'm an undergraduate Computer Science, Data Science, and Linguistics student at the University of California, Los Angeles.
+            Hi! I'm an undergraduate student at the University of California, Los Angeles studying Computer Science, Data Science, and Linguistics.
             I'm passionate about blending technology, analytics, and language processing to solve impactful issues.
           </p>
 
@@ -43,8 +44,8 @@ export default function HomeContent() {
             <div className="space-y-2">
               <h2 className="text-lg font-semibold text-gray-700">Some Fun Facts:</h2>
               <p className="text-base text-gray-700 font-normal leading-relaxed">
-                I drink matcha three times a week. I compete for Team USA Taekwondo. I played piano for seven years. 
-                I resell shoes out of love. My favorite number is 6. Raw crab (Gejang) is the best food.
+                I've visited 11 countries. I'm an avid matcha drinker. I compete for Team USA Taekwondo. I've played piano for seven years. 
+                I resell shoes out of love. My favorite number is 6. And Korean raw marinated crab's the best food.
               </p>
             </div>
           </div>
@@ -57,7 +58,7 @@ export default function HomeContent() {
           transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
           className="flex flex-col items-center w-1/3 mt-16"
         >
-          <div className="w-72 h-72 rounded-full bg-gray-200 overflow-hidden mb-6">
+          <div className="w-72 h-72 rounded-full bg-gray-200 overflow-hidden mb-10">
             {/* Replace with your actual profile picture */}
             <div className="w-full h-full flex items-center justify-center text-gray-400">
               Profile Picture
