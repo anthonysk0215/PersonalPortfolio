@@ -11,8 +11,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative text-lg font-medium transition-colors duration-200
               ${isActive 
-                ? 'text-blue-500' 
-                : 'text-gray-600 hover:text-blue-300'
+                ? 'text-blue-600' 
+                : 'text-gray-600 hover:text-blue-400'
               }
               after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5
               after:bg-blue-500 after:transition-transform after:duration-300
@@ -27,8 +27,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative text-lg font-medium transition-colors duration-200
               ${isActive 
-                ? 'text-blue-500' 
-                : 'text-gray-600 hover:text-blue-300'
+                ? 'text-blue-600' 
+                : 'text-gray-600 hover:text-blue-400'
               }
               after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5
               after:bg-blue-500 after:transition-transform after:duration-300
@@ -43,8 +43,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative text-lg font-medium transition-colors duration-200
               ${isActive 
-                ? 'text-blue-500' 
-                : 'text-gray-600 hover:text-blue-300'
+                ? 'text-blue-600' 
+                : 'text-gray-600 hover:text-blue-400'
               }
               after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5
               after:bg-blue-500 after:transition-transform after:duration-300
@@ -59,8 +59,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative text-lg font-medium transition-colors duration-200
               ${isActive 
-                ? 'text-blue-500' 
-                : 'text-gray-600 hover:text-blue-300'
+                ? 'text-blue-600' 
+                : 'text-gray-600 hover:text-blue-400'
               }
               after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5
               after:bg-blue-500 after:transition-transform after:duration-300
@@ -75,8 +75,8 @@ const NavBar = () => {
             className={({ isActive }) =>
               `relative text-lg font-medium transition-colors duration-200
               ${isActive 
-                ? 'text-blue-500' 
-                : 'text-gray-600 hover:text-blue-300'
+                ? 'text-blue-600' 
+                : 'text-gray-600 hover:text-blue-400'
               }
               after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5
               after:bg-blue-500 after:transition-transform after:duration-300

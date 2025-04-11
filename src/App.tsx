@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from "react"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Navbar from "./components/NavBar.tsx"
-import Home from "./pages/Home.tsx"
-import Experience from "./pages/Experience.tsx"
-import Projects from "./pages/Projects.tsx"
-import Taekwondo from "./pages/Taekwondo.tsx"
-import Contact from "./pages/Contact.tsx"
-import LandingAnimation from "./components/LandingAnimation.tsx"
-import Footer from "./components/Footer.tsx"
+import Navbar from "./components/NavBar"
+import Home from "./pages/Home"
+import Experience from "./pages/Experience"
+import Projects from "./pages/Projects"
+import Taekwondo from "./pages/Taekwondo"
+import Contact from "./pages/Contact"
+import LandingAnimation from "./components/LandingAnimation"
+import Footer from "./components/Footer"
 
 function App() {
   const [showLanding, setShowLanding] = useState(true);

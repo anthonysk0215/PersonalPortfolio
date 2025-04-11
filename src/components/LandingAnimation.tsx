@@ -39,7 +39,7 @@ export default function LandingAnimation({ onComplete }: LandingAnimationProps) 
             key={index}
             className={`text-4xl font-bold transition-all duration-300 ${
               index === currentWordIndex
-                ? "text-baby-blue scale-110"
+                ? "text-blue-600 scale-110"
                 : "text-gray-400 scale-100"
             }`}
           >

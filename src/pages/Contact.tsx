@@ -11,7 +11,7 @@ export default function Contact() {
   
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -19,7 +19,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     // Create mailto link with form data
@@ -135,7 +135,7 @@ export default function Contact() {
         {/* Submit button */}
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-400 text-white font-medium rounded-2xl hover:bg-blue-600 transition-colors flex items-center"
+          className="px-4 py-2 bg-blue-300 text-white font-medium rounded-2xl hover:bg-blue-600 transition-colors flex items-center"
         >
           Send Message
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
