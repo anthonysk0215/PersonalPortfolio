@@ -61,27 +61,27 @@ export default function Projects() {
     >
       <h1 className="text-5xl font-bubble text-blue-500 ml-5 mb-10">Projects</h1>
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <motion.div
             key={project.id}
             whileHover={{ y: -10 }}
-            className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-full max-w-sm"
+            className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow w-full"
           >
-            <div className="h-48 bg-sky-50 flex items-center justify-center">
+            <div className="h-48 sm:h-56 bg-sky-50 flex items-center justify-center">
               <img
                 src={project.image} 
                 alt={project.title}
-                style={{ maxWidth: '100%', maxHeight: '100%', display: 'block' }}
-                className="object contain w-full h-full" />
+                className="w-full h-full object-contain p-4"
+              />
             </div>
-            <div className="p-6 flex flex-col justify-between">
+            <div className="p-4 sm:p-6 flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 text-gray-900">{project.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2 py-1 bg-sky-50 text-sky-600 rounded-full text-xs">
+                    <span key={tag} className="px-2 py-1 bg-sky-50 text-sky-600 rounded-full text-xs sm:text-sm">
                       {tag}
                     </span>
                   ))}
@@ -95,7 +95,7 @@ export default function Projects() {
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-100 text-sm text-gray-800 rounded-xl border border-gray-300 hover:bg-gray-200 transition"
+                    className="px-3 sm:px-4 py-2 bg-gray-100 text-xs sm:text-sm text-gray-800 rounded-xl border border-gray-300 hover:bg-gray-200 transition"
                   >
                     Code
                   </a>
@@ -105,7 +105,7 @@ export default function Projects() {
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-sky-100 text-sm text-sky-700 rounded-xl border border-sky-200 hover:bg-sky-200 transition"
+                    className="px-3 sm:px-4 py-2 bg-sky-100 text-xs sm:text-sm text-sky-700 rounded-xl border border-sky-200 hover:bg-sky-200 transition"
                   >
                     Live Demo
                   </a>

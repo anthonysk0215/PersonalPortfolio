@@ -1,17 +1,14 @@
 "use client"
 
-import { useState, useRef, useEffect, useCallback } from "react"
-import { motion, useInView, AnimatePresence } from "framer-motion"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import {
   Play,
   Award,
   Medal,
   Trophy,
-  ChevronLeft,
-  ChevronRight,
   ExternalLink,
   ChevronDown,
-  X,
   Calendar,
   Search,
   Globe,
@@ -25,27 +22,27 @@ import { Badge } from "../components/ui/badge"
 import { Tabs, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { Input } from "../components/ui/input"
 
-import tkd1 from "../assets/tkd/tkd1.JPG"
-import tkd2 from "../assets/tkd/tkd2.jpg"
-import tkd3 from "../assets/tkd/tkd3.jpg"
-import tkd4 from "../assets/tkd/tkd4.JPG"
-import tkd5 from "../assets/tkd/tkd5.JPG"
-import tkd6 from "../assets/tkd/tkd6.JPG"
-import tkd8 from "../assets/tkd/tkd8.JPG"
-import tkd9 from "../assets/tkd/tkd9.JPG"
-import tkd10 from "../assets/tkd/tkd10.JPG"
-import tkd12 from "../assets/tkd/tkd12.JPG"
-import tkd13 from "../assets/tkd/tkd13.JPG"
-import tkd14 from "../assets/tkd/tkd14.JPG"
-import tkd15 from "../assets/tkd/tkd15.JPG"
-import tkd16 from "../assets/tkd/tkd16.JPG"
-import tkd17 from "../assets/tkd/tkd17.JPG"
-import tkd21 from "../assets/tkd/tkd21.jpg"
-import tkd22 from "../assets/tkd/tkd22.jpg"
-import tkd23 from "../assets/tkd/tkd23.JPG"
-import tkd24 from "../assets/tkd/tkd24.JPG"
-import tkd25 from "../assets/tkd/tkd25.JPG"
-import tkd26 from "../assets/tkd/tkd26.JPG"
+import tkd1 from "../assets/Taekwondo Images/tkd1.JPG"
+import tkd2 from "../assets/Taekwondo Images/tkd2.jpg"
+import tkd3 from "../assets/Taekwondo Images/tkd3.jpg"
+import tkd4 from "../assets/Taekwondo Images/tkd4.JPG"
+import tkd5 from "../assets/Taekwondo Images/tkd5.JPG"
+import tkd6 from "../assets/Taekwondo Images/tkd6.JPG"
+import tkd8 from "../assets/Taekwondo Images/tkd8.JPG"
+import tkd9 from "../assets/Taekwondo Images/tkd9.JPG"
+import tkd10 from "../assets/Taekwondo Images/tkd10.JPG"
+import tkd12 from "../assets/Taekwondo Images/tkd12.JPG"
+import tkd13 from "../assets/Taekwondo Images/tkd13.JPG"
+import tkd14 from "../assets/Taekwondo Images/tkd14.JPG"
+import tkd15 from "../assets/Taekwondo Images/tkd15.JPG"
+import tkd16 from "../assets/Taekwondo Images/tkd16.JPG"
+import tkd17 from "../assets/Taekwondo Images/tkd17.JPG"
+import tkd21 from "../assets/Taekwondo Images/tkd21.jpg"
+import tkd22 from "../assets/Taekwondo Images/tkd22.jpg"
+import tkd23 from "../assets/Taekwondo Images/tkd23.JPG"
+import tkd24 from "../assets/Taekwondo Images/tkd24.JPG"
+import tkd25 from "../assets/Taekwondo Images/tkd25.JPG"
+import tkd26 from "../assets/Taekwondo Images/tkd26.JPG"
 
 export default function Taekwondo() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -54,8 +51,6 @@ export default function Taekwondo() {
   const videosRef = useRef<HTMLDivElement>(null)
   const galleryRef = useRef<HTMLDivElement>(null)
 
-  const [activePhotoIndex, setActivePhotoIndex] = useState(0)
-  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   const [activeFilter, setActiveFilter] = useState("all")
   const [searchTerm, setSearchTerm] = useState("")
   const [activeYear, setActiveYear] = useState<string | null>(null)
@@ -786,33 +781,6 @@ export default function Taekwondo() {
   // Limit displayed achievements unless showAll is true
   const displayedAchievements = showAllAchievements ? sortedAchievements : sortedAchievements.slice(0, 12)
 
-  const nextPhoto = useCallback(() => {
-    setActivePhotoIndex((prev) => (prev + 1) % photos.length)
-  }, [photos.length])
-
-  const prevPhoto = useCallback(() => {
-    setActivePhotoIndex((prev) => (prev - 1 + photos.length) % photos.length)
-  }, [photos.length])
-
-  const openGallery = useCallback((index: number) => {
-    setActivePhotoIndex(index)
-    setIsGalleryOpen(true)
-  }, [])
-
-  // Handle keyboard navigation for gallery
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isGalleryOpen) return
-
-      if (e.key === "ArrowRight") nextPhoto()
-      if (e.key === "ArrowLeft") prevPhoto()
-      if (e.key === "Escape") setIsGalleryOpen(false)
-    }
-
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [isGalleryOpen, nextPhoto, prevPhoto])
-
   return (
     <div ref={containerRef} className="relative overflow-hidden">
       {/* Intro Section - Clean with no background */}
@@ -969,8 +937,113 @@ export default function Taekwondo() {
         </div>
       </div>
 
+      {/* Videos Section */}
+      <div ref={videosRef} className="py-16 bg-sky-50">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isVideosInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto px-4"
+        >
+          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Some Videos!</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {videos.map((video, index) => (
+              <motion.div
+                key={video.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isVideosInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <div className="relative aspect-video">
+                  <img src={video.thumbnail} alt={video.title} className="object-cover" />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                    <a
+                      href={`https://www.youtube.com/watch?v=${video.embedId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-16 h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center hover:bg-opacity-100 transition-all duration-300"
+                    >
+                      <Play className="h-8 w-8 text-sky-500 ml-1" />
+                    </a>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">{video.title}</h3>
+                  <p className="text-gray-600 text-sm">{video.description}</p>
+                  <a
+                    href={`https://www.youtube.com/watch?v=${video.embedId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center mt-4 text-sky-500 hover:text-sky-600 font-medium"
+                  >
+                    Watch on YouTube <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Gallery Section */}
+      <div ref={galleryRef} className="py-16 px-4 bg-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isGalleryInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="max-w-6xl mx-auto"
+        >
+          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Photo Gallery</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            A glimpse into my Taekwondo journey through competition and training.
+          </p>
+
+          {/* Continuous Sliding Row */}
+          <div className="relative overflow-hidden">
+            {/* Main Gallery */}
+            <div className="relative h-80 overflow-hidden rounded-xl">
+              <motion.div
+                className="absolute flex whitespace-nowrap"
+                animate={{
+                  x: [0, -4000],
+                }}
+                transition={{
+                  x: {
+                    repeat: Number.POSITIVE_INFINITY,
+                    repeatType: "loop",
+                    duration: 60,
+                    ease: "linear",
+                  },
+                }}
+              >
+                {/* Duplicate photos array to create continuous loop */}
+                {[...photos, ...photos, ...photos].map((photo, index) => (
+                  <div
+                    key={`${photo.id}-${index}`}
+                    className="relative h-80 w-[400px] inline-block mx-4 rounded-xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Overlay Gradients for Fade Effect */}
+            <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Achievements Section */}
-      <div ref={accomplishmentsRef} className="py-16 px-4">
+      <div ref={accomplishmentsRef} className="py-16 px-4 bg-sky-50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isAccomplishmentsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -1137,111 +1210,6 @@ export default function Taekwondo() {
               </Button>
             </div>
           )}
-        </motion.div>
-      </div>
-
-      {/* Videos Section */}
-      <div ref={videosRef} className="py-16 bg-sky-50">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isVideosInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-6xl mx-auto px-4"
-        >
-          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Some Videos!</h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {videos.map((video, index) => (
-              <motion.div
-                key={video.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isVideosInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
-              >
-                <div className="relative aspect-video">
-                  <img src={video.thumbnail} alt={video.title} className="object-cover" />
-                  <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={`https://www.youtube.com/watch?v=${video.embedId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-16 h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center hover:bg-opacity-100 transition-all duration-300"
-                    >
-                      <Play className="h-8 w-8 text-sky-500 ml-1" />
-                    </a>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">{video.title}</h3>
-                  <p className="text-gray-600 text-sm">{video.description}</p>
-                  <a
-                    href={`https://www.youtube.com/watch?v=${video.embedId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center mt-4 text-sky-500 hover:text-sky-600 font-medium"
-                  >
-                    Watch on YouTube <ExternalLink className="ml-1 h-4 w-4" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Continuous Sliding Photo Gallery */}
-      <div ref={galleryRef} className="py-16 px-4 bg-white mb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isGalleryInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="max-w-6xl mx-auto"
-        >
-          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Photo Gallery</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            A glimpse into my Taekwondo journey through competition and training.
-          </p>
-
-          {/* Continuous Sliding Row */}
-          <div className="relative overflow-hidden">
-            {/* Main Gallery */}
-            <div className="relative h-80 overflow-hidden rounded-xl">
-              <motion.div
-                className="absolute flex whitespace-nowrap"
-                animate={{
-                  x: [0, -12000],
-                }}
-                transition={{
-                  x: {
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatType: "loop",
-                    duration: 120,
-                    ease: "linear",
-                  },
-                }}
-              >
-                {/* Duplicate photos array to create continuous loop */}
-                {[...photos, ...photos, ...photos].map((photo, index) => (
-                  <div
-                    key={`${photo.id}-${index}`}
-                    className="relative h-80 w-[400px] inline-block mx-4 rounded-xl overflow-hidden shadow-lg"
-                  >
-                    <img
-                      src={photo.src}
-                      alt={photo.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Overlay Gradients for Fade Effect */}
-            <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
-          </div>
         </motion.div>
       </div>
     </div>
