@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform, useInView, AnimatePresence } from "fra
 import {
   ChevronDown,
   ChevronUp,
-  ArrowDown,
   Lightbulb,
   BookOpen,
   Microscope,
@@ -41,10 +40,6 @@ export default function Experience() {
     target: containerRef,
     offset: ["start start", "end end"],
   })
-
-  const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1, 0.95])
-  const y = useTransform(scrollYProgress, [0, 0.1], [0, -50])
 
   const scrollProgress = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
 
@@ -162,16 +157,6 @@ export default function Experience() {
     setActiveInternship(activeInternship === id ? null : id)
   }
 
-  const scrollToTimeline = () => {
-    if (containerRef.current) {
-      const yOffset = -100 // Adjust this value as needed
-      const element = containerRef.current
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
-
-      window.scrollTo({ top: y, behavior: "smooth" })
-    }
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 70 }}
@@ -180,9 +165,9 @@ export default function Experience() {
       className="max-w-4xl mx-auto mb-32"
     >
       {/* Sticky header */}
-      <div ref={headerRef} className="transition-all duration-300 py-4 z-20 bg-white">
+      <div ref={headerRef} className="transition-all duration-300 py-4 z-20 bg-white mb-10">
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl font-bubble text-blue-500 ml-5">Experience</h1>
+          <h1 className="text-5xl font-bubble text-blue-500 ml-5">Experience</h1>
           <div
             ref={scrollIndicatorRef}
             className="h-2 w-24 bg-gray-100 rounded-full overflow-hidden opacity-0 transition-opacity duration-300"
@@ -191,20 +176,6 @@ export default function Experience() {
           </div>
         </div>
       </div>
-
-      {/* Intro section with parallax */}
-      <motion.div
-        className="relative h-[30vh] flex flex-col items-center justify-center text-center mb-10"
-        style={{ opacity, scale, y }}
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">My Journey</h2>
-        <p className="text-xl text-gray-700 max-w-2xl mb-8">
-          Explore my timeline of experiences across different fields of technology.
-        </p>
-        <Button onClick={scrollToTimeline} className="rounded-full bg-blue-500 hover:bg-blue-600 text-white">
-          Explore Timeline <ArrowDown className="ml-2 h-4 w-4" />
-        </Button>
-      </motion.div>
 
       {/* Timeline */}
       <div ref={containerRef} className="relative pb-20">

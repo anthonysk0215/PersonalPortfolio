@@ -4,6 +4,7 @@ import computerIcon from '../assets/icons/computer.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 import githubIcon from '../assets/icons/github-sign.png';
 import xIcon from '../assets/icons/twitter.png';
+import profile from '../assets/images/GPT-Ghibili-image.png';
 import { TextShimmer } from './ui/text-shimmer';
 import { ContainerScroll } from './ui/container-scroll-animation';
 
@@ -18,7 +19,7 @@ export default function HomeContent() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white mb-4">
+            <h1 className="text-4xl font-semibold text-black dark:text-white mb-7">
               Hi, I'm <br />
               <TextShimmer
                 duration={1.75}
@@ -62,11 +63,8 @@ export default function HomeContent() {
 
           {/* Right content - Profile image and social links */}
           <div className="flex flex-col items-center space-y-6">
-            <div className="w-72 h-72 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden mb-7">
-              {/* Replace with your actual profile picture */}
-              <div className="w-full h-full flex items-center justify-center text-gray-400">
-                Profile Picture
-              </div>
+            <div className="w-72 h-72 rounded-full overflow-hidden mb-7">
+              <img src={profile} alt="" />
             </div>
 
             <div className="flex space-x-4 w-full">

@@ -59,7 +59,7 @@ export default function Projects() {
       transition={{ duration: 1 }}
       className="max-w-4xl mx-auto pb-10"
     >
-      <h1 className="text-4xl font-bubble text-blue-500 ml-5 mb-10">Projects</h1>
+      <h1 className="text-5xl font-bubble text-blue-500 ml-5 mb-10">Projects</h1>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
