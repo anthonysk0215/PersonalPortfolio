@@ -121,14 +121,14 @@ export default function Experience() {
       title: "Crew Member",
       institution: "Panda Express",
       location: "Sacramento, CA",
-      duration: "2 months",
+      duration: "3 months",
       description:
-        "Ate rice with honey sesame chicken every shift.",
+        "Served the front of the house and drive through line.",
       highlights: [
-        "Cleaned some tables.",
-        "Bagged food and rang up too many orders."
+        "Delivered customer service by engaging with guests, addressing inquiries, and ensuring a positive dining experience all while collaborating with 10+ team members throughout peak hours.",
+        "Contributed to an organized work environment and performed precise cash handling and safety."
       ],
-      skills: ["Data Analysis"],
+      skills: ["Data Analysis", "Attention to Detail", "Customer Service"],
       icon: <BookOpen className="h-8 w-8" />,
       color: "bg-blue-100 text-blue-800",
       header: "Service Focus",
@@ -183,7 +183,7 @@ export default function Experience() {
         <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-100 transform md:translate-x-px"></div>
 
         {/* Timeline items */}
-        <div className="space-y-32">
+        <div className="space-y-20">
           {internships.map((internship, index) => {
             return (
               <TimelineItem
@@ -238,6 +238,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 }) => {
   const itemRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(itemRef, { once: false, amount: 0.3 })
+  const [isHovered, setIsHovered] = useState(false)
 
   useEffect(() => {
     if (itemRef.current && itemRefs.current) {
@@ -264,12 +265,19 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         {internship.year}
       </div>
 
-      {/* Content */}
-      <div className="w-full md:w-1/2 pl-8 md:pl-0 md:pr-8 md:text-right pt-8">
+      {/* Title and Institution */}
+        <div
+          className={`w-full md:w-1/2 pt-8 ${
+            index % 2 === 0
+              ? "md:pr-[4.5rem] md:pl-0 md:text-right"
+              : "md:pl-[4.5rem] md:pr-0 md:text-left"
+          }`}
+        >
         <motion.div
           initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          className={`${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}
         >
           <h3 className="text-xl font-bold text-gray-900">{internship.title}</h3>
           <div className="text-gray-600">{internship.institution}</div>
@@ -279,27 +287,35 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
         </motion.div>
       </div>
 
-      <div className={`w-full md:w-1/2 pl-8 ${index % 2 === 0 ? "md:text-left" : "md:text-left"} mt-4 md:mt-8`}>
+      {/* Card */}
+        <div
+          className={`w-full md:w-1/2 mt-4 md:mt-8 ${
+            index % 2 === 0
+              ? "md:pl-[4.5rem] md:pr-0"
+              : "md:pr-[4.5rem] md:pl-[0.25rem]"
+          }`}
+        >
         <motion.div
           initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
+          <Card 
+            className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow w-full max-w-[calc(100vw-2rem)]"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <CardContent className="p-0">
               <div className={`p-4 flex items-center ${internship.color}`}>
                 <div className="mr-3">{internship.icon}</div>
-                <div>
-                  <h4 className="font-semibold">{internship.header}</h4>
-                  <p className="text-sm">Click to explore details</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold text-sm sm:text-base truncate">{internship.header}</h4>
+                  <p className="text-xs sm:text-sm text-gray-600">Hover to explore details</p>
                 </div>
-                <Button variant="ghost" size="icon" className="ml-auto" onClick={() => toggleInternship(internship.id)}>
-                  {activeInternship === internship.id ? <ChevronUp /> : <ChevronDown />}
-                </Button>
               </div>
 
               <AnimatePresence>
-                {activeInternship === internship.id && (
+                {isHovered && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
@@ -308,19 +324,19 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                     className="overflow-hidden"
                   >
                     <div className="p-4 bg-white">
-                      <p className="text-gray-700 mb-4">{internship.description}</p>
+                      <p className="text-sm sm:text-base text-gray-700 mb-4">{internship.description}</p>
 
-                      <h5 className="font-semibold text-gray-900 mb-2">Key Achievements</h5>
-                      <ul className="list-disc pl-5 mb-4 text-gray-700 space-y-1">
+                      <h5 className="font-semibold text-sm sm:text-base text-gray-900 mb-2">Key Achievements</h5>
+                      <ul className="list-disc pl-5 mb-4 text-sm sm:text-base text-gray-700 space-y-1">
                         {internship.highlights.map((highlight, i) => (
                           <li key={i}>{highlight}</li>
                         ))}
                       </ul>
 
-                      <h5 className="font-semibold text-gray-900 mb-2">Skills Applied</h5>
+                      <h5 className="font-semibold text-sm sm:text-base text-gray-900 mb-2">Skills Applied</h5>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {internship.skills.map((skill, i) => (
-                          <Badge key={i} variant="outline" className="bg-blue-50">
+                          <Badge key={i} variant="outline" className="text-xs sm:text-sm bg-blue-50">
                             {skill}
                           </Badge>
                         ))}
