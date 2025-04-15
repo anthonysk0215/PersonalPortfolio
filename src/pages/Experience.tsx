@@ -3,15 +3,12 @@
 import React, { useState, useRef, useEffect } from "react"
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from "framer-motion"
 import {
-  ChevronDown,
-  ChevronUp,
   Lightbulb,
   BookOpen,
   Microscope,
   FlaskRoundIcon as Flask,
 } from "lucide-react"
 import { Badge } from "../components/ui/badge"
-import { Button } from "../components/ui/button"
 import { Card, CardContent } from "../components/ui/card"
 
 interface ResearchInternship {
@@ -238,7 +235,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
 }) => {
   const itemRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(itemRef, { once: false, amount: 0.3 })
-  const [isHovered, setIsHovered] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false)
 
   useEffect(() => {
     if (itemRef.current && itemRefs.current) {
@@ -301,21 +298,20 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Card 
-            className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow w-full max-w-[calc(100vw-2rem)]"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow w-full max-w-[calc(100vw-2rem)] cursor-pointer"
+            onClick={() => setIsExpanded(!isExpanded)}
           >
             <CardContent className="p-0">
               <div className={`p-4 flex items-center ${internship.color}`}>
                 <div className="mr-3">{internship.icon}</div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-semibold text-sm sm:text-base truncate">{internship.header}</h4>
-                  <p className="text-xs sm:text-sm text-gray-600">Hover to explore details</p>
+                  <p className="text-xs sm:text-sm text-gray-600">Click to {isExpanded ? "hide" : "show"} details</p>
                 </div>
               </div>
 
               <AnimatePresence>
-                {isHovered && (
+                {isExpanded && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
