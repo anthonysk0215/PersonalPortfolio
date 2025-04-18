@@ -90,7 +90,7 @@ export default function Experience() {
         "Revamped 'Buzz' linebreak formatter by enhancing its UI and adding features to clean up formatting, such as automatic bracket removal for quicker print design workflow.",
         "Working on 'Meow', updating Daily Bruin's X and Facebook post scheduler.",
       ],
-      skills: ["Kubernetes", "React.js", "Docker", "Git", "Typescript", "Next.js", "MongoDB", "Git"],
+      skills: ["Kubernetes", "React.js", "Docker", "Typescript", "Next.js", "MongoDB", "Git"],
       icon: <Microscope className="h-8 w-8" />,
       color: "bg-green-100 text-green-800",
       header: "Development Focus",
@@ -105,7 +105,7 @@ export default function Experience() {
       description:
         "Built and scaled Swoon Front Office, a live web tutoring management platform, from 3 to 120+ users.",
       highlights: [
-        "Coding + meetings :)",
+        "More coding :)",
       ],
       skills: ["MySQL", "React.js", "Docker", "TypeScript", "Material UI", "Git"],
       icon: <BookOpen className="h-8 w-8" />,
@@ -138,7 +138,7 @@ export default function Experience() {
       location: "Cambridge, MA",
       duration: "4 months",
       description:
-        "Conducted research under Dr. Wanrong Zhang, authored paper on supervised machine learning classification models ability to predict Taekwondo routine scores, annotated 100+ tournaments for a robust dataset.",
+        "Theory of Computation Group: Conducted research under Dr. Wanrong Zhang, authored paper on supervised machine learning classification models ability to predict Taekwondo routine scores, annotated 100+ tournaments for a robust dataset.",
       highlights: [
         "Selected as 1 of 5 students internationally to study and author paper under Dr. Wanrong Zhang's supervision from the Theory of Computation Group.",
         "Received STEM Merit Scholarship, covering $3,500 'Data Privacy in Modern Data Science' course and research expenses.",
