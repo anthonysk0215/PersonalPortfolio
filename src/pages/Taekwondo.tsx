@@ -797,12 +797,10 @@ export default function Taekwondo() {
           <h1 className="text-5xl font-bubble mb-6 text-blue-500">My Taekwondo Journey</h1>
 
           <p className="text-xl text-gray-700 mb-8">
-            I started Taekwondo when I was 6 years old. Since then, I've made the U.S. national team four times, been chosen as national team captain twice, and led the Sacramento Taekwondo Club competition team, helping numerous athletes make the national team. </p>
+            I began Taekwondo at the age of 6. And since, I've made the U.S. national team four times, been chosen as the national team captain twice, and led the Sacramento Taekwondo Club competition team, helping numerous athletes make the national team too. </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Team USA</Badge>
-            <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">
-              World Championship Medalist
-            </Badge>
+            <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">World Championship Medalist</Badge>
             <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Certified Referee</Badge>
           </div>
         </motion.div>
