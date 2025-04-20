@@ -72,7 +72,7 @@ export default function Experience() {
         "Studying and enhancing Large Language Models (LLMs) multimodal understanding via CLIP fine-tuning.",
       ],
       skills: ["Pytorch", "Python", "Machine Learning", "Computer Vision", "MatPlotLib", "NumPy"],
-      icon: <Flask className="h-8 w-8" />,
+      icon: <Flask className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-red-100 text-red-800",
       header: "Reserch Focus",
     },
@@ -90,8 +90,8 @@ export default function Experience() {
         "Revamped 'Buzz' linebreak formatter by enhancing its UI and adding features to clean up formatting, such as automatic bracket removal for quicker print design workflow.",
         "Working on 'Meow', updating Daily Bruin's X and Facebook post scheduler.",
       ],
-      skills: ["Kubernetes", "React.js", "Docker", "Typescript", "Next.js", "MongoDB", "Git"],
-      icon: <Microscope className="h-8 w-8" />,
+      skills: ["Kubernetes", "React.js", "Docker", "Git", "Typescript", "Next.js", "MongoDB", "Git"],
+      icon: <Microscope className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-green-100 text-green-800",
       header: "Development Focus",
     },
@@ -105,10 +105,10 @@ export default function Experience() {
       description:
         "Built and scaled Swoon Front Office, a live web tutoring management platform, from 3 to 120+ users.",
       highlights: [
-        "More coding :)",
+        "Coding + meetings :)",
       ],
       skills: ["MySQL", "React.js", "Docker", "TypeScript", "Material UI", "Git"],
-      icon: <BookOpen className="h-8 w-8" />,
+      icon: <BookOpen className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-blue-100 text-blue-800",
       header: "Software Focus",
     },
@@ -126,7 +126,7 @@ export default function Experience() {
         "Contributed to an organized work environment and performed precise cash handling and safety."
       ],
       skills: ["Data Analysis", "Attention to Detail", "Customer Service"],
-      icon: <BookOpen className="h-8 w-8" />,
+      icon: <BookOpen className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-blue-100 text-blue-800",
       header: "Service Focus",
     },
@@ -138,13 +138,13 @@ export default function Experience() {
       location: "Cambridge, MA",
       duration: "4 months",
       description:
-        "Theory of Computation Group: Conducted research under Dr. Wanrong Zhang, authored paper on supervised machine learning classification models ability to predict Taekwondo routine scores, annotated 100+ tournaments for a robust dataset.",
+        "Conducted research under Dr. Wanrong Zhang, authored paper on supervised machine learning classification models ability to predict Taekwondo routine scores, annotated 100+ tournaments for a robust dataset.",
       highlights: [
         "Selected as 1 of 5 students internationally to study and author paper under Dr. Wanrong Zhang's supervision from the Theory of Computation Group.",
         "Received STEM Merit Scholarship, covering $3,500 'Data Privacy in Modern Data Science' course and research expenses.",
       ],
       skills: ["Python", "SVM", "Data Privacy", "SKLearn", "Logistic Regression", "Random Forest", "Neural Networks", "SciPy", "Pandas"],
-      icon: <Lightbulb className="h-8 w-8" />,
+      icon: <Lightbulb className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-purple-100 text-purple-800",
       header: "Research Focus"
     },
@@ -162,12 +162,12 @@ export default function Experience() {
       className="max-w-4xl mx-auto mb-32"
     >
       {/* Sticky header */}
-      <div ref={headerRef} className="transition-all duration-300 py-4 z-20 bg-white mb-10">
+      <div ref={headerRef} className="transition-all duration-300 py-2 md:py-4 z-20 bg-white mb-4 md:mb-10">
         <div className="flex justify-between items-center">
-          <h1 className="text-5xl font-bubble text-blue-500 ml-5">Experience</h1>
+          <h1 className="text-3xl md:text-5xl font-bubble text-blue-500 ml-2 md:ml-5">Experiences</h1>
           <div
             ref={scrollIndicatorRef}
-            className="h-2 w-24 bg-gray-100 rounded-full overflow-hidden opacity-0 transition-opacity duration-300"
+            className="h-1.5 md:h-2 w-12 md:w-24 bg-gray-100 rounded-full overflow-hidden opacity-0 transition-opacity duration-300"
           >
             <motion.div className="h-full bg-blue-500 rounded-full" style={{ width: scrollProgress }} />
           </div>
@@ -175,12 +175,12 @@ export default function Experience() {
       </div>
 
       {/* Timeline */}
-      <div ref={containerRef} className="relative pb-20">
+      <div ref={containerRef} className="relative pb-8 md:pb-20 px-4 md:px-0">
         {/* Timeline line */}
-        <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-100 transform md:translate-x-px"></div>
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-blue-100 transform md:translate-x-px"></div>
 
         {/* Timeline items */}
-        <div className="space-y-20">
+        <div className="space-y-8 md:space-y-20">
           {internships.map((internship, index) => {
             return (
               <TimelineItem
@@ -197,10 +197,10 @@ export default function Experience() {
       </div>
 
       {/* End of timeline indicator */}
-      <div className="flex justify-center">
-        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center">
-          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-            <div className="w-4 h-4 rounded-full bg-blue-500"></div>
+      <div className="flex justify-center px-4 md:px-0">
+        <div className="w-6 h-6 md:w-12 md:h-12 rounded-full bg-blue-50 flex items-center justify-center">
+          <div className="w-4 h-4 md:w-8 md:h-8 rounded-full bg-blue-100 flex items-center justify-center">
+            <div className="w-2 h-2 md:w-4 md:h-4 rounded-full bg-blue-500"></div>
           </div>
         </div>
       </div>
@@ -253,60 +253,64 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
       className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
     >
       {/* Timeline dot with animated pulse */}
-      <div className="absolute left-0 md:left-1/2 w-5 h-5 rounded-full bg-blue-300 border-4 border-white transform -translate-x-2 md:-translate-x-2.5 z-10">
+      <div className="absolute left-4 md:left-1/2 w-3 h-3 md:w-5 md:h-5 rounded-full bg-blue-300 border-2 md:border-4 border-white transform -translate-x-1.5 md:-translate-x-2.5 z-10">
         {isInView && <span className="absolute -inset-1 rounded-full bg-blue-300 animate-ping opacity-75"></span>}
       </div>
 
       {/* Year indicator */}
-      <div className="absolute left-8 md:left-1/2 top-0 transform md:translate-x-8 bg-blue-50 px-3 py-1 rounded-full text-blue-700 font-semibold text-sm">
+      <div className="absolute left-8 md:left-1/2 top-0 transform md:translate-x-8 bg-blue-50 px-1.5 py-0.5 md:px-3 md:py-1 rounded-full text-blue-700 font-semibold text-[10px] md:text-sm">
         {internship.year}
       </div>
 
       {/* Title and Institution */}
-        <div
-          className={`w-full md:w-1/2 pt-8 ${
-            index % 2 === 0
-              ? "md:pr-[4.5rem] md:pl-0 md:text-right"
-              : "md:pl-[4.5rem] md:pr-0 md:text-left"
-          }`}
-        >
+      <div
+        className={`w-full md:w-1/2 pt-4 md:pt-8 pl-12 md:pl-0 ${
+          index % 2 === 0
+            ? "md:pr-[4.5rem] md:text-right"
+            : "md:pl-[4.5rem]"
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className={`${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}
+          className={`${index % 2 === 0 ? "md:text-right" : ""}`}
         >
-          <h3 className="text-xl font-bold text-gray-900">{internship.title}</h3>
-          <div className="text-gray-600">{internship.institution}</div>
-          <div className="text-gray-500 text-sm">
+          <h3 className="text-base md:text-xl font-bold text-gray-900">{internship.title}</h3>
+          <div className="text-xs md:text-base text-gray-600">{internship.institution}</div>
+          <div className="text-[10px] md:text-sm text-gray-500">
             {internship.location} • {internship.duration}
           </div>
         </motion.div>
       </div>
 
       {/* Card */}
-        <div
-          className={`w-full md:w-1/2 mt-4 md:mt-8 ${
-            index % 2 === 0
-              ? "md:pl-[4.5rem] md:pr-0"
-              : "md:pr-[4.5rem] md:pl-[0.25rem]"
-          }`}
-        >
+      <div
+        className={`w-full md:w-1/2 mt-2 md:mt-8 pl-12 md:pl-0 pr-2 md:pr-0 ${
+          index % 2 === 0
+            ? "md:pl-[4.5rem]"
+            : "md:pl-[0.3rem] md:pr-[4.5rem]"
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Card 
-            className="overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow w-full max-w-[calc(100vw-2rem)] cursor-pointer"
+            className="overflow-hidden shadow-md hover:shadow-lg transition-shadow w-full cursor-pointer rounded-lg"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            <CardContent className="p-0">
-              <div className={`p-4 flex items-center ${internship.color}`}>
-                <div className="mr-3">{internship.icon}</div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-sm sm:text-base truncate">{internship.header}</h4>
-                  <p className="text-xs sm:text-sm text-gray-600">Click to {isExpanded ? "hide" : "show"} details</p>
+            <CardContent>
+              <div className={`rounded-t-lg ${internship.color}`}>
+                <div className="p-2 md:p-4 flex items-center">
+                  <div className="mr-2 md:mr-3 flex-shrink-0 flex items-center justify-center">
+                    {internship.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[10px] md:text-sm truncate">{internship.header}</h4>
+                    <p className="text-[8px] md:text-xs text-gray-600">Click to {isExpanded ? "hide" : "show"} details</p>
+                  </div>
                 </div>
               </div>
 
@@ -317,22 +321,22 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+                    className="overflow-hidden bg-white rounded-b-lg"
                   >
-                    <div className="p-4 bg-white">
-                      <p className="text-sm sm:text-base text-gray-700 mb-4">{internship.description}</p>
+                    <div className="p-2 md:p-4">
+                      <p className="text-[10px] md:text-sm text-gray-700 mb-2 md:mb-4 leading-tight md:leading-normal">{internship.description}</p>
 
-                      <h5 className="font-semibold text-sm sm:text-base text-gray-900 mb-2">Key Achievements</h5>
-                      <ul className="list-disc pl-5 mb-4 text-sm sm:text-base text-gray-700 space-y-1">
+                      <h5 className="font-semibold text-[10px] md:text-sm text-gray-900 mb-1 md:mb-2">Key Achievements</h5>
+                      <ul className="list-disc pl-3 md:pl-5 mb-2 md:mb-4 text-[10px] md:text-sm text-gray-700 space-y-0.5 md:space-y-1">
                         {internship.highlights.map((highlight, i) => (
-                          <li key={i}>{highlight}</li>
+                          <li key={i} className="leading-tight md:leading-normal">{highlight}</li>
                         ))}
                       </ul>
 
-                      <h5 className="font-semibold text-sm sm:text-base text-gray-900 mb-2">Skills Applied</h5>
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <h5 className="font-semibold text-[10px] md:text-sm text-gray-900 mb-1 md:mb-2">Skills Applied</h5>
+                      <div className="flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                         {internship.skills.map((skill, i) => (
-                          <Badge key={i} variant="outline" className="text-xs sm:text-sm bg-blue-50">
+                          <Badge key={i} variant="outline" className="text-[8px] md:text-xs bg-blue-50">
                             {skill}
                           </Badge>
                         ))}

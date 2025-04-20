@@ -33,7 +33,6 @@ import tkd9 from "../assets/Taekwondo Images/tkd9.JPG"
 import tkd10 from "../assets/Taekwondo Images/tkd10.JPG"
 import tkd12 from "../assets/Taekwondo Images/tkd12.JPG"
 import tkd13 from "../assets/Taekwondo Images/tkd13.JPG"
-import tkd14 from "../assets/Taekwondo Images/tkd14.JPG"
 import tkd15 from "../assets/Taekwondo Images/tkd15.JPG"
 import tkd16 from "../assets/Taekwondo Images/tkd16.JPG"
 import tkd17 from "../assets/Taekwondo Images/tkd17.JPG"
@@ -721,24 +720,23 @@ export default function Taekwondo() {
   ]
 
   const photos = [
-    { id: 1, src: tkd1, alt: "Taekwondo performance" },
-    { id: 2, src: tkd2, alt: "Taekwondo performance" },
-    { id: 3, src: tkd3, alt: "Taekwondo performance" },
+    { id: 1, src: tkd2, alt: "Taekwondo performance" },
+    { id: 2, src: tkd3, alt: "Taekwondo performance" },
+    { id: 3, src: tkd1, alt: "Taekwondo performance" },
     { id: 4, src: tkd4, alt: "Taekwondo performance" },
     { id: 5, src: tkd5, alt: "Taekwondo performance" },
     { id: 6, src: tkd6, alt: "Taekwondo performance" },
     { id: 7, src: tkd8, alt: "Taekwondo performance" },
     { id: 8, src: tkd9, alt: "Taekwondo performance" },
     { id: 9, src: tkd12, alt: "Taekwondo performance" },
-    { id: 11, src: tkd13, alt: "Taekwondo performance" },
-    { id: 12, src: tkd14, alt: "Taekwondo performance" },
-    { id: 14, src: tkd16, alt: "Taekwondo performance" },
-    { id: 15, src: tkd17, alt: "Taekwondo performance" },
-    { id: 16, src: tkd21, alt: "Taekwondo performance" },
-    { id: 17, src: tkd22, alt: "Taekwondo performance" },
-    { id: 18, src: tkd23, alt: "Taekwondo performance" },
-    { id: 19, src: tkd24, alt: "Taekwondo performance" },
-    { id: 20, src: tkd25, alt: "Taekwondo performance" },
+    { id: 10, src: tkd13, alt: "Taekwondo performance" },
+    { id: 11, src: tkd16, alt: "Taekwondo performance" },
+    { id: 12, src: tkd17, alt: "Taekwondo performance" },
+    { id: 13, src: tkd21, alt: "Taekwondo performance" },
+    { id: 14, src: tkd22, alt: "Taekwondo performance" },
+    { id: 15, src: tkd23, alt: "Taekwondo performance" },
+    { id: 16, src: tkd24, alt: "Taekwondo performance" },
+    { id: 27, src: tkd25, alt: "Taekwondo performance" },
   ]
 
   // Get unique years from achievements
@@ -786,7 +784,7 @@ export default function Taekwondo() {
       {/* Intro Section - Clean with no background */}
       <motion.div
         ref={introRef}
-        className="min-h-[40vh] flex flex-col items-center justify-center text-center relative px-4 py-8"
+        className="min-h-[40vh] flex flex-col items-center justify-center text-center relative px-4 py-6 md:py-8"
       >
         <motion.div
           className="relative z-10 max-w-3xl mx-auto"
@@ -794,66 +792,56 @@ export default function Taekwondo() {
           animate={isIntroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-5xl font-bubble mb-6 text-blue-500">My Taekwondo Journey</h1>
+          <h1 className="text-3xl md:text-5xl font-bubble mb-4 md:mb-6 text-blue-500">My Taekwondo Journey</h1>
 
-          <p className="text-xl text-gray-700 mb-8">
-            I began Taekwondo at the age of 6. And since, I've made the U.S. national team four times, been chosen as the national team captain twice, and led the Sacramento Taekwondo Club competition team, helping numerous athletes make the national team too. </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Team USA</Badge>
-            <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">World Championship Medalist</Badge>
-            <Badge className="px-4 py-2 text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Certified Referee</Badge>
+          <p className="text-sm md:text-xl text-gray-700 mb-4 md:mb-8 leading-relaxed">
+            I began Taekwondo at the age of 6. And since, I've made the U.S. national team four times, been chosen as the national team captain twice, and led the Sacramento Taekwondo Club competition team, helping numerous athletes make the national team too.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+            <Badge className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Team USA</Badge>
+            <Badge className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-base bg-sky-100 text-sky-800 hover:bg-sky-200">World Championship Medalist</Badge>
+            <Badge className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-base bg-sky-100 text-sky-800 hover:bg-sky-200">Certified Referee</Badge>
           </div>
         </motion.div>
 
         <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0 }}
           animate={isIntroInView ? { opacity: 1, y: [0, 10, 0] } : { opacity: 0 }}
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, repeatType: "loop" }}
         >
-          <ChevronDown className="h-10 w-10 text-sky-300" />
+          <ChevronDown className="h-6 w-6 md:h-10 md:w-10 text-sky-300" />
         </motion.div>
       </motion.div>
 
       {/* Main Highlights Section */}
-      <div className="py-16 bg-gradient-to-b from-sky-50 to-white">
+      <div className="py-8 md:py-16 bg-gradient-to-b from-sky-50 to-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-8 text-center text-gray-900">Major Achievements</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center text-gray-900">Major Achievements</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {mainHighlights.map((highlight, index) => (
               <motion.div
                 key={highlight.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                className="relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-90`}></div>
 
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <img
-                    src="/placeholder.svg?height=400&width=800"
-                    alt=""
-                    className="object-cover"
-                  />
-                </div>
-
                 {/* Content */}
-                <div className="relative p-6 flex flex-col h-full">
+                <div className="relative p-4 md:p-6 flex flex-col h-full">
                   <div className="flex items-start">
                     {/* Medal Icon */}
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ duration: 0.5, type: "spring", delay: index * 0.1 }}
-                      className="w-16 h-16 flex-shrink-0 mr-4"
+                      className="w-10 h-10 md:w-16 md:h-16 flex-shrink-0 mr-3 md:mr-4"
                     >
                       <div className="relative w-full h-full">
-                        <div
-                          className={`absolute inset-0 bg-gradient-to-br ${highlight.color} rounded-full shadow-lg opacity-30`}
-                        ></div>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} rounded-full shadow-lg opacity-30`}></div>
                         <div className="absolute inset-1 bg-white bg-opacity-90 rounded-full flex items-center justify-center">
                           {highlight.icon}
                         </div>
@@ -867,7 +855,7 @@ export default function Taekwondo() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + index * 0.1, duration: 0.4 }}
                       >
-                        <h3 className="text-xl font-bold mb-1 text-white">{highlight.title}</h3>
+                        <h3 className="text-base md:text-xl font-bold mb-1 text-white">{highlight.title}</h3>
                       </motion.div>
                     </div>
                   </div>
@@ -876,9 +864,9 @@ export default function Taekwondo() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
-                    className="mt-4"
+                    className="mt-3 md:mt-4"
                   >
-                    <div className="flex items-center text-white text-opacity-90 text-sm mb-2">
+                    <div className="flex items-center text-white text-opacity-90 text-xs md:text-sm mb-2">
                       <Calendar className="h-3 w-3 mr-1" />
                       <span>{highlight.year}</span>
                       <span className="mx-2">•</span>
@@ -886,7 +874,7 @@ export default function Taekwondo() {
                       <span>{highlight.location}</span>
                     </div>
 
-                    <div className="bg-white bg-opacity-20 p-3 rounded-lg backdrop-blur-sm text-white text-sm mb-4">
+                    <div className="bg-white bg-opacity-20 p-2 md:p-3 rounded-lg backdrop-blur-sm text-white text-xs md:text-sm mb-3 md:mb-4">
                       {highlight.description}
                     </div>
                   </motion.div>
@@ -897,9 +885,7 @@ export default function Taekwondo() {
                     transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
                     className="mt-auto"
                   >
-                    <div
-                      className={`inline-block px-3 py-1 rounded-full bg-white bg-opacity-20 text-white font-medium text-sm`}
-                    >
+                    <div className="inline-block px-2 py-1 md:px-3 md:py-1 rounded-full bg-white bg-opacity-20 text-white font-medium text-xs md:text-sm">
                       {highlight.medal} Medal
                     </div>
                   </motion.div>
@@ -913,39 +899,39 @@ export default function Taekwondo() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="mt-8 bg-white rounded-xl shadow-md p-6 flex flex-wrap justify-around items-center gap-4"
+            className="mt-6 md:mt-8 bg-white rounded-xl shadow-md p-4 md:p-6 flex flex-wrap justify-around items-center gap-4"
           >
             <div className="text-center">
-              <div className="text-yellow-500 font-bold text-3xl md:text-4xl">{medalCounts["Gold"] || 0}</div>
-              <div className="text-gray-600 text-sm md:text-base">Gold Medals</div>
+              <div className="text-2xl md:text-4xl text-yellow-500 font-bold">{medalCounts["Gold"] || 0}</div>
+              <div className="text-xs md:text-base text-gray-600">Gold Medals</div>
             </div>
             <div className="text-center">
-              <div className="text-gray-500 font-bold text-3xl md:text-4xl">{medalCounts["Silver"] || 0}</div>
-              <div className="text-gray-600 text-sm md:text-base">Silver Medals</div>
+              <div className="text-2xl md:text-4xl text-gray-500 font-bold">{medalCounts["Silver"] || 0}</div>
+              <div className="text-xs md:text-base text-gray-600">Silver Medals</div>
             </div>
             <div className="text-center">
-              <div className="text-amber-600 font-bold text-3xl md:text-4xl">{medalCounts["Bronze"] || 0}</div>
-              <div className="text-gray-600 text-sm md:text-base">Bronze Medals</div>
+              <div className="text-2xl md:text-4xl text-amber-600 font-bold">{medalCounts["Bronze"] || 0}</div>
+              <div className="text-xs md:text-base text-gray-600">Bronze Medals</div>
             </div>
             <div className="text-center">
-              <div className="text-sky-500 font-bold text-3xl md:text-4xl">{achievements.length}</div>
-              <div className="text-gray-600 text-sm md:text-base">Total Achievements</div>
+              <div className="text-2xl md:text-4xl text-sky-500 font-bold">{achievements.length}</div>
+              <div className="text-xs md:text-base text-gray-600">Total Achievements</div>
             </div>
           </motion.div>
         </div>
       </div>
 
       {/* Videos Section */}
-      <div ref={videosRef} className="py-16 bg-sky-50">
+      <div ref={videosRef} className="py-8 md:py-16 bg-sky-50">
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVideosInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-6xl mx-auto px-4"
         >
-          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Some Videos!</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-8 text-center text-gray-900">Some Videos!</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {videos.map((video, index) => (
               <motion.div
                 key={video.id}
@@ -956,28 +942,28 @@ export default function Taekwondo() {
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative aspect-video">
-                  <img src={video.thumbnail} alt={video.title} className="object-cover" />
+                  <img src={video.thumbnail} alt={video.title} className="object-cover w-full h-full" />
                   <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                     <a
                       href={`https://www.youtube.com/watch?v=${video.embedId}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-16 h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center hover:bg-opacity-100 transition-all duration-300"
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white bg-opacity-80 flex items-center justify-center hover:bg-opacity-100 transition-all duration-300"
                     >
-                      <Play className="h-8 w-8 text-sky-500 ml-1" />
+                      <Play className="h-6 w-6 md:h-8 md:w-8 text-sky-500 ml-1" />
                     </a>
                   </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">{video.title}</h3>
-                  <p className="text-gray-600 text-sm">{video.description}</p>
+                <div className="p-3 md:p-5">
+                  <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2 text-gray-900">{video.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-600">{video.description}</p>
                   <a
                     href={`https://www.youtube.com/watch?v=${video.embedId}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center mt-4 text-sky-500 hover:text-sky-600 font-medium"
+                    className="inline-flex items-center mt-2 md:mt-4 text-sky-500 hover:text-sky-600 font-medium text-xs md:text-base"
                   >
-                    Watch on YouTube <ExternalLink className="ml-1 h-4 w-4" />
+                    Watch on YouTube <ExternalLink className="ml-1 h-3 w-3 md:h-4 md:w-4" />
                   </a>
                 </div>
               </motion.div>
@@ -987,30 +973,30 @@ export default function Taekwondo() {
       </div>
 
       {/* Gallery Section */}
-      <div ref={galleryRef} className="py-16 px-4 bg-white">
+      <div ref={galleryRef} className="py-8 md:py-16 px-4 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isGalleryInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-2 text-center text-gray-900">Photo Gallery</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 text-center text-gray-900">Photo Gallery</h2>
+          <p className="text-center text-xs md:text-base text-gray-600 mb-6 md:mb-12 max-w-2xl mx-auto">
             A glimpse into my Taekwondo journey through competition and training.
           </p>
 
           {/* Continuous Sliding Row */}
           <div className="relative overflow-hidden">
             {/* Main Gallery */}
-            <div className="relative h-80 overflow-hidden rounded-xl">
+            <div className="relative h-48 md:h-80 overflow-hidden rounded-xl">
               <motion.div
                 className="absolute flex whitespace-nowrap"
                 animate={{
-                  x: [0, -4000],
+                  x: [0, -7500],
                 }}
                 transition={{
                   x: {
-                    repeat: Number.POSITIVE_INFINITY,
+                    repeat: Infinity,
                     repeatType: "loop",
                     duration: 60,
                     ease: "linear",
@@ -1021,7 +1007,7 @@ export default function Taekwondo() {
                 {[...photos, ...photos, ...photos].map((photo, index) => (
                   <div
                     key={`${photo.id}-${index}`}
-                    className="relative h-80 w-[400px] inline-block mx-4 rounded-xl overflow-hidden shadow-lg"
+                    className="relative h-48 md:h-80 w-[250px] md:w-[400px] inline-block mx-2 md:mx-4 rounded-xl overflow-hidden shadow-lg"
                   >
                     <img
                       src={photo.src}
@@ -1034,44 +1020,44 @@ export default function Taekwondo() {
             </div>
 
             {/* Overlay Gradients for Fade Effect */}
-            <div className="absolute top-0 bottom-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
-            <div className="absolute top-0 bottom-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
+            <div className="absolute top-0 bottom-0 left-0 w-12 md:w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+            <div className="absolute top-0 bottom-0 right-0 w-12 md:w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
           </div>
         </motion.div>
       </div>
 
       {/* Achievements Section */}
-      <div ref={accomplishmentsRef} className="py-16 px-4 bg-sky-50">
+      <div ref={accomplishmentsRef} className="py-8 md:py-16 px-4 bg-sky-50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isAccomplishmentsInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-4xl font-bold mb-4 text-center text-gray-900">Career Achievements</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 text-center text-gray-900">Career Achievements</h2>
 
           {/* Filters and Search */}
-          <div className="mb-8 bg-white rounded-xl shadow-md p-6">
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
+          <div className="mb-6 md:mb-8 bg-white rounded-xl shadow-md p-4 md:p-6">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4 mb-4 md:mb-6">
               <div className="flex-1">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-3 w-3 md:h-4 md:w-4" />
                   <Input
                     type="text"
                     placeholder="Search competitions or categories..."
-                    className="pl-10"
+                    className="pl-8 md:pl-10 text-xs md:text-sm"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
                 </div>
               </div>
 
-              <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
+              <div className="flex gap-1.5 md:gap-2 overflow-x-auto pb-2 md:pb-0">
                 <Button
                   variant={activeYear === null ? "default" : "outline"}
                   size="sm"
                   onClick={() => setActiveYear(null)}
-                  className={activeYear === null ? "bg-sky-500 hover:bg-sky-600" : ""}
+                  className={`text-xs md:text-sm py-1 h-7 md:h-9 ${activeYear === null ? "bg-sky-500 hover:bg-sky-600" : ""}`}
                 >
                   All Years
                 </Button>
@@ -1081,7 +1067,7 @@ export default function Taekwondo() {
                     variant={activeYear === year ? "default" : "outline"}
                     size="sm"
                     onClick={() => setActiveYear(year)}
-                    className={activeYear === year ? "bg-sky-500 hover:bg-sky-600" : ""}
+                    className={`text-xs md:text-sm py-1 h-7 md:h-9 ${activeYear === year ? "bg-sky-500 hover:bg-sky-600" : ""}`}
                   >
                     {year}
                   </Button>
@@ -1090,26 +1076,26 @@ export default function Taekwondo() {
             </div>
 
             <Tabs defaultValue="all" onValueChange={setActiveFilter}>
-              <TabsList className="w-full grid grid-cols-2 md:grid-cols-7 h-auto">
-                <TabsTrigger value="all" className="py-2">
+              <TabsList className="w-full grid grid-cols-3 md:grid-cols-7 h-auto gap-1">
+                <TabsTrigger value="all" className="py-1 md:py-2 text-xs md:text-sm">
                   All
                 </TabsTrigger>
-                <TabsTrigger value="gold" className="py-2">
+                <TabsTrigger value="gold" className="py-1 md:py-2 text-xs md:text-sm">
                   Gold
                 </TabsTrigger>
-                <TabsTrigger value="silver" className="py-2">
+                <TabsTrigger value="silver" className="py-1 md:py-2 text-xs md:text-sm">
                   Silver
                 </TabsTrigger>
-                <TabsTrigger value="bronze" className="py-2">
+                <TabsTrigger value="bronze" className="py-1 md:py-2 text-xs md:text-sm">
                   Bronze
                 </TabsTrigger>
-                <TabsTrigger value="freestyle" className="py-2">
+                <TabsTrigger value="freestyle" className="py-1 md:py-2 text-xs md:text-sm">
                   Freestyle
                 </TabsTrigger>
-                <TabsTrigger value="poomsae" className="py-2">
+                <TabsTrigger value="poomsae" className="py-1 md:py-2 text-xs md:text-sm">
                   Poomsae
                 </TabsTrigger>
-                <TabsTrigger value="individual" className="py-2">
+                <TabsTrigger value="individual" className="py-1 md:py-2 text-xs md:text-sm">
                   Individual
                 </TabsTrigger>
               </TabsList>
@@ -1117,7 +1103,7 @@ export default function Taekwondo() {
           </div>
 
           {/* Achievement Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {displayedAchievements.map((achievement, index) => (
               <motion.div
                 key={achievement.id}
@@ -1134,14 +1120,14 @@ export default function Taekwondo() {
                         : "bg-gradient-to-br from-sky-50 to-sky-100 border-l-4 border-sky-400"
                 }`}
               >
-                <div className="p-5">
+                <div className="p-3 md:p-5">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="font-bold text-gray-900">{achievement.title}</h3>
-                      <p className="text-sm text-gray-600">{achievement.category}</p>
+                      <h3 className="font-bold text-sm md:text-base text-gray-900">{achievement.title}</h3>
+                      <p className="text-xs md:text-sm text-gray-600">{achievement.category}</p>
                     </div>
                     <div
-                      className={`flex items-center justify-center w-10 h-10 rounded-full ${
+                      className={`flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full ${
                         achievement.medal === "Gold"
                           ? "bg-yellow-100 text-yellow-600"
                           : achievement.medal === "Silver"
@@ -1151,29 +1137,29 @@ export default function Taekwondo() {
                               : "bg-sky-100 text-sky-600"
                       }`}
                     >
-                      {achievement.medal === "Gold" && <Trophy className="h-5 w-5" />}
-                      {achievement.medal === "Silver" && <Medal className="h-5 w-5" />}
-                      {achievement.medal === "Bronze" && <Award className="h-5 w-5" />}
+                      {achievement.medal === "Gold" && <Trophy className="h-4 w-4 md:h-5 md:w-5" />}
+                      {achievement.medal === "Silver" && <Medal className="h-4 w-4 md:h-5 md:w-5" />}
+                      {achievement.medal === "Bronze" && <Award className="h-4 w-4 md:h-5 md:w-5" />}
                       {achievement.medal !== "Gold" &&
                         achievement.medal !== "Silver" &&
-                        achievement.medal !== "Bronze" && <Flag className="h-5 w-5" />}
+                        achievement.medal !== "Bronze" && <Flag className="h-4 w-4 md:h-5 md:w-5" />}
                     </div>
                   </div>
 
-                  <div className="flex items-center mt-3 text-xs text-gray-500">
-                    <Calendar className="h-3 w-3 mr-1" />
+                  <div className="flex items-center mt-2 md:mt-3 text-[10px] md:text-xs text-gray-500">
+                    <Calendar className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />
                     <span>{achievement.year}</span>
                     <span className="mx-2">•</span>
-                    {achievement.teamType === "Individual" && <User className="h-3 w-3 mr-1" />}
-                    {achievement.teamType === "Team" && <Users className="h-3 w-3 mr-1" />}
-                    {achievement.teamType === "Pair" && <Users className="h-3 w-3 mr-1" />}
+                    {achievement.teamType === "Individual" && <User className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />}
+                    {achievement.teamType === "Team" && <Users className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />}
+                    {achievement.teamType === "Pair" && <Users className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />}
                     <span>{achievement.teamType}</span>
                     <span className="mx-2">•</span>
                     <span>{achievement.type}</span>
                   </div>
 
                   <div
-                    className={`mt-3 text-xs inline-block px-2 py-1 rounded-full ${
+                    className={`mt-2 md:mt-3 text-[10px] md:text-xs inline-block px-2 py-0.5 md:px-2 md:py-1 rounded-full ${
                       achievement.medal === "Gold"
                         ? "bg-yellow-100 text-yellow-800"
                         : achievement.medal === "Silver"
@@ -1192,17 +1178,21 @@ export default function Taekwondo() {
 
           {/* Show More/Less Button */}
           {sortedAchievements.length > 12 && (
-            <div className="flex justify-center mt-8">
-              <Button onClick={() => setShowAllAchievements(!showAllAchievements)} variant="outline" className="group">
+            <div className="flex justify-center mt-6 md:mt-8">
+              <Button 
+                onClick={() => setShowAllAchievements(!showAllAchievements)} 
+                variant="outline" 
+                className="group text-xs md:text-sm h-8 md:h-10"
+              >
                 {showAllAchievements ? (
                   <>
                     Show Less
-                    <ChevronUp className="ml-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+                    <ChevronUp className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:-translate-y-1 transition-transform" />
                   </>
                 ) : (
                   <>
                     Show More ({sortedAchievements.length - 12} more)
-                    <ChevronDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                    <ChevronDown className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-y-1 transition-transform" />
                   </>
                 )}
               </Button>

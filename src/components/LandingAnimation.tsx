@@ -4,9 +4,10 @@ const words = [
   "software engineer",
   "algorithms",
   "machine learning",
-  "natural language processing",
+  "data scientist",
+  "databases",
+  "neural networks",
   "full stack",
-  "machine learning",
   "artificial intelligence",
 ];
 
