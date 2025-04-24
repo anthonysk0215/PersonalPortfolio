@@ -5,7 +5,6 @@ const words = [
   "algorithms",
   "machine learning",
   "data scientist",
-  "databases",
   "neural networks",
   "full stack",
   "artificial intelligence",

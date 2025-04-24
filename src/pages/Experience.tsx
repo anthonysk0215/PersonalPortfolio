@@ -19,7 +19,7 @@ interface ResearchInternship {
   location: string
   duration: string
   description: string
-  highlights: string[]
+  highlights: (string | React.ReactNode)[]
   skills: string[]
   icon: React.ReactNode
   color: string
@@ -86,11 +86,17 @@ export default function Experience() {
       description:
         "Developing and updating multiple internal tools for 19 other cross-functional Daily Bruin Newspaper teams to 1) help standardize designs, 2)help with social media scheduling, and 3) document design notes on printed newspapers.",
       highlights: [
-        "Developed 'Woof' in team of 5, an internal web tool standardizing UCLA's newspaper designs, style guides, and layouts; implemented web page with search linking function using Next.js, reducing style ideation time by 50%.",
-        "Revamped 'Buzz' linebreak formatter by enhancing its UI and adding features to clean up formatting, such as automatic bracket removal for quicker print design workflow.",
-        "Working on 'Meow', updating Daily Bruin's X and Facebook post scheduler.",
+        <>
+          Developed 'Woof' (<a href="https://github.com/dailybruin/woof" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">Github</a>) in team of 5, an internal web tool standardizing UCLA's newspaper designs, style guides, and layouts; implemented web page with search linking function using Next.js, reducing style ideation time by 50%.
+        </>,
+        <>
+          Revamped 'Buzz' (<a href="https://github.com/dailybruin/buzz" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">Github</a>) linebreak formatter by enhancing its UI and adding features to clean up formatting, such as automatic bracket removal for quicker print design workflow.
+        </>,
+        <>
+          Working on Meow (Deployed <a href="https://meow.dailybruin.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">Here</a>) updating Daily Bruin's X and Facebook post scheduler.
+        </>,
       ],
-      skills: ["Kubernetes", "React.js", "Docker", "Git", "Typescript", "Next.js", "MongoDB", "Git"],
+      skills: ["Kubernetes", "React.js", "Docker", "Typescript", "Next.js", "MongoDB", "Git"],
       icon: <Microscope className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-green-100 text-green-800",
       header: "Development Focus",
@@ -105,7 +111,7 @@ export default function Experience() {
       description:
         "Built and scaled Swoon Front Office, a live web tutoring management platform, from 3 to 120+ users.",
       highlights: [
-        "Coding + meetings :)",
+        "Coded more and met new people!",
       ],
       skills: ["MySQL", "React.js", "Docker", "TypeScript", "Material UI", "Git"],
       icon: <BookOpen className="h-3 w-3 md:h-5 md:w-5" />,
