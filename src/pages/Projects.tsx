@@ -6,9 +6,19 @@ import gymnastics from "../assets/images/gymnastics.png";
 import wonkyKong from "../assets/images/wonky-kong.png";
 import codeClimbers from "../assets/images/CodeClimbers.png";
 import theraVoice from "../assets/images/TheravoiceLogo.png";
+import wayFinder from "../assets/images/wayFinder.png";
 
 export default function Projects() {
   const projects = [
+    {
+      id: 0,
+      title: "WayFinder AI",
+      description: "An AR, AI-powered travel companion built for Snap Spectacles that offers real-time, location-based recommendations. Combines FastAPI, Fetch.ai agents, and OpenAI to personalize experiences, guide exploration with AR overlays, and suggest safe routes. Features an interactive map, voice-based assistant, and route planning for both everyday discovery and travel scenarios.",
+      tags: ["FastAPI", "Fetch.ai", "OpenAI", "Python", "Snap Spectacles", "AR","TypeScript"],
+      image: wayFinder,
+      codeLink: "https://github.com/anthonysk0215/lahacks",
+      demoLink: "https://devpost.com/software/jaunt-i8zdep",
+    },
     {
       id: 1,
       title: "TheraVoice",
@@ -16,7 +26,7 @@ export default function Projects() {
       tags: ["FastAPI", "Supabase", "ElevenLabs", "TypeScript", "Material UI", "Tailwind CSS", "JWT", "React/Vite"],
       image: theraVoice,
       codeLink: "https://github.com/anthonysk0215/bruinAIHacks",
-      demoLink: "https://devpost.com/software/theravoice",
+      demoLink: "https://youtu.be/Ln-PkLCfJIo",
     },
     {
       id: 2,
