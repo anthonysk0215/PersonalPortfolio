@@ -63,7 +63,7 @@ export default function Contact() {
       transition={{ duration: 1 }}
       className="max-w-2xl mx-auto px-4 pb-10 md:pb-20"
     >
-      <h1 className="text-3xl md:text-5xl font-bubble mb-6 md:mb-8 text-blue-500">
+      <h1 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-blue-500">
         Get in Touch
       </h1>
       

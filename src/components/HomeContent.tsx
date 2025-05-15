@@ -24,7 +24,7 @@ export default function HomeContent() {
                 Hi, I'm <br />
                 <TextShimmer
                   duration={1.75}
-                  className="text-6xl md:text-[6rem] font-bubble mt-0 md:mt-1 leading-[1.1] [--base-color:theme(colors.blue.500)] [--base-gradient-color:theme(colors.blue.200)] dark:[--base-color:theme(colors.blue.700)] dark:[--base-gradient-color:theme(colors.blue.400)]"
+                  className="text-6xl md:text-[6rem] font-helvetica mt-0 md:mt-1 leading-[1.1] [--base-color:theme(colors.blue.500)] [--base-gradient-color:theme(colors.blue.200)] dark:[--base-color:theme(colors.blue.700)] dark:[--base-gradient-color:theme(colors.blue.400)]"
                 >
                   Anthony Do
                 </TextShimmer>

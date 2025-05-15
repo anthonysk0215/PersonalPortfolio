@@ -170,7 +170,7 @@ export default function Experience() {
       {/* Sticky header */}
       <div ref={headerRef} className="transition-all duration-300 py-2 md:py-4 z-20 bg-white mb-4 md:mb-10">
         <div className="flex justify-between items-center">
-          <h1 className="text-3xl md:text-5xl font-bubble text-blue-500 ml-2 md:ml-5">Experiences</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-blue-500 ml-2 md:ml-5">Experiences</h1>
           <div
             ref={scrollIndicatorRef}
             className="h-1.5 md:h-2 w-12 md:w-24 bg-gray-100 rounded-full overflow-hidden opacity-0 transition-opacity duration-300"

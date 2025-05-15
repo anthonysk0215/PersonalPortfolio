@@ -792,7 +792,7 @@ export default function Taekwondo() {
           animate={isIntroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-3xl md:text-5xl font-bubble mb-4 md:mb-6 text-blue-500">My Taekwondo Journey</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-blue-500">My Taekwondo Journey</h1>
 
           <p className="text-sm md:text-xl text-gray-700 mb-4 md:mb-8 leading-relaxed">
             I began Taekwondo at the age of 6. And since, I've made the U.S. national team four times, been chosen as the national team captain twice, and led the Sacramento Taekwondo Club competition team, helping numerous athletes make the national team too.
