@@ -60,6 +60,23 @@ export default function Experience() {
 
   const internships: ResearchInternship[] = [
     {
+      id: "DataON",
+      year: "Jun 2025",
+      title: "Software Engineering Intern",
+      institution: "DataON",
+      location: "Anaheim, CA",
+      duration: "4 months",
+      description:
+        "Internal RAG + LLM pipeline tool for DataON's support team to resolve tickets.",
+      highlights: [
+        "Automated REST API integration of local documents, helping the support team resolve 2–3× more tickets.",
+      ],
+      skills: ["LangChain", "Python", "Ollama Embeddings", "ChromaDB", "RESTful API", "OCR", "Node.js"],
+      icon: <Flask className="h-3 w-3 md:h-5 md:w-5" />,
+      color: "bg-purple-100 text-purple-800",
+      header: "Software Focus",
+    },
+    {
       id: "research-lab",
       year: "Jan 2025",
       title: "Research Assistant",
@@ -133,7 +150,7 @@ export default function Experience() {
       ],
       skills: ["Data Analysis", "Attention to Detail", "Customer Service"],
       icon: <BookOpen className="h-3 w-3 md:h-5 md:w-5" />,
-      color: "bg-blue-100 text-blue-800",
+      color: "bg-purple-100 text-purple-800",
       header: "Service Focus",
     },
     {
@@ -151,7 +168,7 @@ export default function Experience() {
       ],
       skills: ["Python", "SVM", "Data Privacy", "SKLearn", "Logistic Regression", "Random Forest", "Neural Networks", "SciPy", "Pandas"],
       icon: <Lightbulb className="h-3 w-3 md:h-5 md:w-5" />,
-      color: "bg-purple-100 text-purple-800",
+      color: "bg-red-100 text-red-800",
       header: "Research Focus"
     },
   ]

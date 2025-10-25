@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import computerIcon from '../assets/icons/computer.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
@@ -47,16 +46,17 @@ export default function HomeContent() {
                   </div>
                   <ul className="list-disc ml-12 space-y-1 text-gray-600 dark:text-gray-400">
                     <li>Software Developer for Daily Bruin Internal Tools Team</li>
-                    <li>Machine Learning Researcher at UCLA VCLA Lab</li>
-                    <li>Building this personal website</li>
+                    <li>Machine Learning Researcher at UCLA ScAi Lab</li>
+                    <li>Technology Consulting Director at Glitch UCLA</li>
                   </ul>
                 </div>
 
                 <div className="space-y-2">
                   <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Some Fun Facts:</h2>
                   <p className="text-base text-gray-600 dark:text-gray-400">
-                    I've visited 11 countries. I'm an avid matcha drinker. I compete for Team USA Taekwondo. I've played piano for seven years. 
-                    I resell shoes out of love. My favorite number is 6. And Korean raw marinated crab's the best food.
+                    I'm an avid matcha drinker. I compete for Team USA Taekwondo. I've played piano for seven years. 
+                    I resell shoes out of love. I've visited 11 countries. My favorite number is 6. 
+                    And Korean raw marinated crab's my favorite food.
                   </p>
                 </div>
               </div>

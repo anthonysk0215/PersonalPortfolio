@@ -4,7 +4,7 @@ const words = [
   "software engineer",
   "algorithms",
   "machine learning",
-  "data scientist",
+  "developer",
   "neural networks",
   "full stack",
   "artificial intelligence",
