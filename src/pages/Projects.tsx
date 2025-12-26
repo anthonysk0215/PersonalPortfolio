@@ -7,11 +7,20 @@ import wonkyKong from "../assets/images/wonky-kong.png";
 import codeClimbers from "../assets/images/CodeClimbers.png";
 import theraVoice from "../assets/images/TheravoiceLogo.png";
 import wayFinder from "../assets/images/wayFinder.png";
+import scriptShelf from "../assets/images/scriptShelf.png";
 
 export default function Projects() {
   const projects = [
     {
       id: 0,
+      title: "Script-Shelf",
+      description: "Script-Shelf is a full-stack developer tool that lets users save, organize, and retrieve code snippets across platforms. It provides a shared backend that syncs snippets between a web app, Chrome extension, and VS Code extension, making it easy to store, version, and access reusable code anywhere.",
+      tags: ["Node.js/Express", "PostgreSQL", "bcrypt", "React", "TypeScript", "Rest API", "Chrome Extension", "VS Code Extension", "Cucumber", "Jest"],
+      image: scriptShelf,
+      codeLink: "https://github.com/AshwinJ127/script-shelf",
+    },
+    {
+      id: 1,
       title: "WayFinder AI",
       description: "An AR, AI-powered travel companion built for Snap Spectacles that offers real-time, location-based recommendations. Combines FastAPI, Fetch.ai agents, and OpenAI to personalize experiences, guide exploration with AR overlays, and suggest safe routes. Features an interactive map, voice-based assistant, and route planning for both everyday discovery and travel scenarios.",
       tags: ["FastAPI", "Fetch.ai", "OpenAI", "Python", "Snap Spectacles", "AR","TypeScript"],
@@ -20,7 +29,7 @@ export default function Projects() {
       demoLink: "https://devpost.com/software/jaunt-i8zdep",
     },
     {
-      id: 1,
+      id: 2,
       title: "TheraVoice",
       description: "An AI-powered mental health companion web app that enables natural voice conversations with an empathetic AI therapist. Features real-time voice-to-text processing, AI-generated responses, and text-to-speech replies. Includes secure user authentication, session persistence, and a modern dark mode UI.",
       tags: ["FastAPI", "Supabase", "ElevenLabs", "TypeScript", "Material UI", "Tailwind CSS", "JWT", "React/Vite"],
@@ -29,7 +38,7 @@ export default function Projects() {
       demoLink: "https://youtu.be/Ln-PkLCfJIo",
     },
     {
-      id: 2,
+      id: 3,
       title: "Plant Portal",
       description: "A virtual 3D garden where you can see your plants grow! This platform uses AI to identify your plants and translates them into a dynamic 3D space, while tracking your carbon emissions. Features secure authentication, real-time plant recognition, and an engaging way to connect with sustainability.",
       tags: ["React/Vite", "Tailwind CSS", "Gemini API", "Three.js", "JWT", "MongoDB"],
@@ -38,7 +47,7 @@ export default function Projects() {
       demoLink: "https://devpost.com/software/plant-portal",
     },
     {
-      id: 3,
+      id: 4,
       title: "Gymnastics Computer Vision Analysis",
       description: "Analyzing UCLA D1 Gymnastics floor routines to optimize peak flip heights by modeling takeoff angles and momentum offset, extracting joint positions using pose estimation. Featuring image upload with mathematical modeling and visualizations to derive correlations.",
       tags: ["OpenCV", "MediaPipe", "Python", "NumPy", "Matplotlib"],
@@ -46,7 +55,7 @@ export default function Projects() {
       codeLink: "https://github.com/anthonysk0215",
     },
     {
-      id: 4,
+      id: 5,
       title: "Wonky Kong",
       description: "Wonky Kong is a retro-inspired platformer where players navigate platforms, climb ladders, and dodge hazards like rolling barrels and fireballs while trying to reach Kong. With burp-powered attacks and collectible goodies, players must survive each level and advance through increasingly challenging stages.",
       tags: ["C", "C++"],
@@ -54,7 +63,7 @@ export default function Projects() {
       codeLink: "https://github.com/anthonysk0215/Wonky-Kong",
     },
     {
-      id: 5,
+      id: 6,
       title: "AI Clash Royale Card Predictor",
       description: "Utilizing machine learning techniques to clean, process, and analyze a kaggle dataset on game characters. Creating python scripts to extract meaningful insights, such as determineing how much elixir a fictional card may cost.",
       tags: ["Python", "Pandas", "SVM", "RFC", "Logistic Regression", "NumPy", "Matplotlib"],
@@ -62,7 +71,7 @@ export default function Projects() {
       codeLink: "https://github.com/anthonysk0215/Clash-Royale-Predictor",
     },
     {
-      id: 6,
+      id: 7,
       title: "CodeClimbers Website",
       description: "Created the CodeClimbers website, a resource for free tech education in Sacramento. It connects youth and seniors with valuable computer science and digital literacy programs. The website implements features like a mobile hamburger menu, sign-up form, and an engaging user interface.",
       tags: ["HTML", "CSS", "JavaScript"],

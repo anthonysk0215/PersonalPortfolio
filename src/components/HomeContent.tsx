@@ -55,7 +55,7 @@ export default function HomeContent() {
                   <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300">Some Fun Facts:</h2>
                   <p className="text-base text-gray-600 dark:text-gray-400">
                     I'm an avid matcha drinker. I compete for Team USA Taekwondo. I've played piano for seven years. 
-                    I resell shoes out of love. I've visited 11 countries. My favorite number is 6. 
+                    I resell shoes out of love. My favorite number is 6. 
                     And Korean raw marinated crab's my favorite food.
                   </p>
                 </div>
