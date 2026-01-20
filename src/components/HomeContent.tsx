@@ -45,9 +45,10 @@ export default function HomeContent() {
                     <span className="text-gray-700 dark:text-gray-300">Currently working on:</span>
                   </div>
                   <ul className="list-disc ml-12 space-y-1 text-gray-600 dark:text-gray-400">
-                    <li>Software Developer for Daily Bruin Internal Tools Team</li>
+                    <li>Staff Software Engineer at Daily Bruin</li>
                     <li>Machine Learning Researcher at UCLA ScAi Lab</li>
                     <li>Technology Consulting Director at Glitch UCLA</li>
+                    <li>IT Support at UCLA Social Sciences Center</li>
                   </ul>
                 </div>
 

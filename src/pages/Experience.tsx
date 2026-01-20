@@ -71,7 +71,7 @@ export default function Experience() {
       highlights: [
         "Automated REST API integration of local documents, helping the support team resolve 2–3× more tickets.",
       ],
-      skills: ["LangChain", "Python", "Ollama Embeddings", "ChromaDB", "RESTful API", "OCR", "Node.js"],
+      skills: ["LangChain", "Python", "Ollama Embeddings", "ChromaDB", "RESTful API", "OCR", "Node.js", "Vector Databases"],
       icon: <Flask className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-purple-100 text-purple-800",
       header: "Software Focus",
@@ -82,21 +82,21 @@ export default function Experience() {
       title: "Research Assistant",
       institution: "UCLA VCLA Lab",
       location: "Los Angeles, CA",
-      duration: "Present",
+      duration: "6 months",
       description:
         "Conducting research under Dr. Ying Nian Wu.",
       highlights: [
         "Studying and enhancing Large Language Models (LLMs) multimodal understanding via CLIP fine-tuning.",
       ],
-      skills: ["Pytorch", "Python", "Machine Learning", "Computer Vision", "MatPlotLib", "NumPy"],
+      skills: ["Pytorch", "Python", "Machine Learning", "Computer Vision", "MatPlotLib", "NumPy", "Fine-tuning", "NLP"],
       icon: <Flask className="h-3 w-3 md:h-5 md:w-5" />,
-      color: "bg-red-100 text-red-800",
+      color: "bg-red-100 text-red-800", 
       header: "Reserch Focus",
     },
     {
       id: "DailyBruin",
       year: "Oct 2024",
-      title: "Software Engineer",
+      title: "Staff Software Engineer",
       institution: "Daily Bruin",
       location: "Los Angeles, CA",
       duration: "Present",
@@ -113,7 +113,7 @@ export default function Experience() {
           Working on Meow (Deployed <a href="https://meow.dailybruin.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline hover:text-blue-700">Here</a>) updating Daily Bruin's X and Facebook post scheduler.
         </>,
       ],
-      skills: ["Kubernetes", "React.js", "Docker", "Typescript", "Next.js", "MongoDB", "Git"],
+      skills: ["Kubernetes", "React.js", "Docker", "Typescript", "Next.js", "MongoDB", "Git", "Node.js", "PostgreSQL", "Django", "AWS", "CI/CD"],
       icon: <Microscope className="h-3 w-3 md:h-5 md:w-5" />,
       color: "bg-green-100 text-green-800",
       header: "Development Focus",
